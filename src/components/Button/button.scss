@@ -1,0 +1,75 @@
+@import "../../styles/utilities/mixins";
+@import "../../styles/utilities/variables";
+
+.btn {
+    font-size: 14px;
+    width: calc(100% / 2);
+    height: 42px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    @include adaptTo("tablet"){
+        font-size: 18px;
+        width: 30%
+    }
+    @include adaptTo("desktop"){
+        font-size: 20px;
+        width: 30%
+    }
+
+    svg {
+        margin-top: 4px;
+    }
+
+    &--primary {
+        background-color: $bgButtonPrimary;
+        color: $white;
+
+        &:hover {
+            background-color: $bgButtonHover;
+        }
+    }
+
+    &--secondary {
+        background-color: $white;
+        color: $blue;
+        border: 1px solid $blue;
+
+        &:hover {
+            background-color: $bgButtonHover;
+            color: $white;
+            border: "none";
+        }
+    }
+
+    &--next {
+        svg {
+            margin-left: 10px;
+        }
+    }
+
+    &--previous {
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    &--finish {
+        background-color: $blue;
+        color: $white;
+    }
+
+    &--disabled {
+        background-color: $bgQuaternary;
+        cursor: initial;
+
+        &:hover {
+            background-color: $bgQuaternary;
+            color: $blue;
+        }
+    }
+}

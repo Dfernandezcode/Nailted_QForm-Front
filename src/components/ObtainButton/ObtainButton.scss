@@ -1,0 +1,33 @@
+@import "../../styles/utilities/mixins";
+@import "../../styles/utilities/variables";
+@import "../../styles/utilities/layout-mixins";
+
+.obtainbtn-container {
+  &__obtain {
+    @include flex-center;
+    width: fit-content;
+    padding: 10px 20px;
+    min-height: 60px;
+    border-radius: 50px;
+    margin: 50px 0;
+    font-size: 18px;
+    color: $white;
+    background-color: $bgButtonPrimary;
+    font-weight: bold;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+
+    @include adaptTo("tablet") {
+      margin-top: 50px;
+    }
+
+    @include adaptTo("desktop") {
+      margin-top: 50px;
+    }
+  }
+}

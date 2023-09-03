@@ -1,0 +1,65 @@
+@import "../../styles/utilities/variables";
+// Layout Mixins
+@import "../../styles/utilities/mixins";
+@import "../../styles/utilities/layout-mixins";
+
+.input {
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__element {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center;
+      max-width: 540px;
+      width: 100%;
+      margin-bottom: 30px;
+      color: $tertiaryFont;
+      border-bottom: 1px solid $quaternaryFont;
+      
+      &[type=number]{
+        max-width: 180px;
+        align-self: center;
+        margin-bottom: 0;
+        text-align: center;
+      }
+  
+      &:focus-visible {
+        outline: none;
+        border-bottom: 1px solid $primaryFont;
+      }
+  
+      &::placeholder {
+        font-size: 14px;
+        text-align: center;
+        font-weight: 300;
+  
+        @include adaptTo("desktopAll") {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__buttons {
+      align-self: center;
+
+      &--left {
+        margin-right: 5px;
+      }
+
+      &--right {
+        margin-left: 5px;
+      }
+    
+      svg {
+        color: $blue;
+        width: 30px;
+        height: 27px;
+      }
+    }
+}

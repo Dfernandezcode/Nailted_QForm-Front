@@ -1,0 +1,99 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@import "../utilities/layout-mixins";
+
+.email-page {
+  @include flex-center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 20px 30px;
+  gap: 50px;
+
+  &__content-title {
+    height: 30vh;
+    min-width: 300px;
+    max-width: 350px;
+    &--header {
+      font-size: 28px;
+      color: $primaryFont;
+      font-weight: bold;
+    }
+    &--subtext {
+      font-size: 18px;
+      color: $tertiaryFont;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+    &--cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: $secondaryFont;
+      background-color: $bgQuaternary;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 5px 10px;
+      min-width: 300px;
+      max-width: 450px;
+      margin: 10px auto;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__input {
+    text-align: center;
+    margin: 40px auto;
+  }
+
+  &__input::placeholder {
+    text-align: center;
+  }
+
+  &__content-input {
+    min-width: 300px;
+    display: flex;
+    max-width: 350px;
+    min-height: 100px;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    &--terms {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin: 25px 0;
+      gap: 0 12.5px;
+      font-size: 16px;
+    }
+  }
+
+  &__content-input::placeholder {
+    text-align: center;
+  }
+
+  &__content-send {
+    margin: 20px auto;
+    &--btn {
+      background-color: $bgButtonPrimary;
+      color: $white;
+      border-radius: 25px;
+      height: 50px;
+      width: 250px;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.confirm-send__header {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: $quaternaryFont;
+  font-weight: bold;
+  width: 100%;
+}

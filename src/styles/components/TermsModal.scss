@@ -1,0 +1,16 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@import "../utilities/layout-mixins";
+
+.modal__link {
+  color: $secondaryFont;
+}
+
+.modal__content {
+  &--header {
+    @include flex-center;
+    font-size: 24px;
+    color: $primaryFont;
+    font-weight: bold;
+  }
+}

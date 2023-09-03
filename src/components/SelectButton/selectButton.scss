@@ -1,0 +1,48 @@
+@import "../../styles/utilities/mixins";
+@import "../../styles/utilities/variables";
+
+.select-button {
+    margin-top: 15px;
+    width: 230px;
+    height: 48px;
+    position: relative;
+    background-color: $bgQuaternary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+
+    &:has(input:checked) {
+        background-color: $blue;
+    }
+
+    &:nth-child(2) {
+        margin: 15px 15px 0;
+    }
+
+    input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.011;
+        z-index: 100;
+        cursor: pointer;
+
+        &:checked + label {
+            color: $white
+        }
+    }
+
+    label {
+        display: block;
+        position: absolute;
+        z-index: 90;
+        line-height: 1.8em;
+        color: $blue;
+    }
+}

@@ -1,0 +1,55 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+@import "../utilities/layout-mixins";
+
+.description-container {
+  @include flex-center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  width: 100vw;
+  background-color: $blue;
+  color: $white;
+  text-align: left;
+  padding: 20px;
+
+  &__header {
+    font-size: 34px;
+    width: 300px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    width: 300px;
+    font-size: 20px;
+  }
+
+  @include adaptTo("tablet") {
+    width: clamp(450px, 75vw, 100%);
+    height: 450px;
+    text-align: left;
+    margin: 0;
+    border-radius: 10px;
+    padding: 22px;
+  }
+
+  @include adaptTo("desktop") {
+    text-align: left;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  @include adaptTo("desktop-m") {
+    width: 450px;
+    height: 450px;
+  }
+  @include adaptTo("desktop-l") {
+    width: 450px;
+    height: 450px;
+  }
+  @include adaptTo("desktop-xl") {
+    width: 450px;
+    height: 450px;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+@import "../utilities/layout-mixins";
+
+.obtain-btn-container {
+  @include flex-center;
+  height: 100px;
+  margin: 25px 0 25px 0;
+  &__obtain {
+    @include flex-center;
+    width: 300px;
+    min-height: 60px;
+    border-radius: 50px;
+    font-size: 18px;
+    color: $white;
+    background-color: $bgButtonPrimary;
+    font-weight: bold;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+
+    @include adaptTo("tablet") {
+      margin-top: 50px;
+    }
+
+    @include adaptTo("desktop") {
+      margin-top: 50px;
+    }
+  }
+}

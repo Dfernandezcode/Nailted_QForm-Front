@@ -1,0 +1,81 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+@import "../utilities/layout-mixins";
+
+.category-results {
+  @include flex-center;
+  flex-direction: column;
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 6px;
+  margin: 12.5px;
+
+  @include adaptTo("tablet") {
+    max-width: 450px;
+  }
+  @include adaptTo("desktop") {
+    max-width: 450px;
+  }
+  &__header {
+    @include flex-center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    color: #179bf6;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: $bgQuaternary;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 0 12.5px 0;
+
+    @include adaptTo("tablet") {
+      max-width: 450px;
+      font-size: 22px;
+    }
+    @include adaptTo("desktop") {
+      max-width: 500px;
+      font-size: 24px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    min-width: 300px;
+    max-width: inherit;
+  }
+
+  &__textarea {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    min-height: 70px;
+    background-color: $bgQuinary;
+    color: $white;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    &-div {
+      @include flex-center;
+      flex-direction: row;
+    }
+    @include adaptTo("tablet") {
+      font-size: 18px;
+    }
+    @include adaptTo("desktop") {
+      font-size: 20px;
+    }
+  }
+}

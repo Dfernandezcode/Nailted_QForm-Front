@@ -1,0 +1,106 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 16px;
+  max-height: 100vh;
+  color: $primaryFont;
+
+  @include adaptTo("tablet") {
+    margin: 50px 25px 0 0;
+  }
+
+  @include adaptTo("desktop") {
+    flex-direction: row;
+    background-image: none;
+    align-items: center;
+    justify-content: center;
+    margin: 75px 50px 0 0;
+  }
+
+  &__background-img {
+    display: none;
+
+    @include adaptTo("desktop-m") {
+      display: flex;
+      width: 500px;
+      height: 440px;
+      border-radius: 10px;
+      margin: 6.35px;
+      margin: 35px 0 0 40px;
+    }
+    @include adaptTo("desktop-l") {
+      display: flex;
+      width: 600px;
+      height: 440px;
+      border-radius: 10px;
+      margin: 6.35px;
+      margin: 35px 0 0 40px;
+    }
+
+    @include adaptTo("desktop-xl") {
+      display: flex;
+      width: 700px;
+      height: 440px;
+      border-radius: 10px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    @include adaptTo("tablet") {
+      max-width: 50vw;
+
+    }
+    @include adaptTo("desktop") {
+
+      max-width: 50vw;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: $bgPrimary;
+      height: 65vh;
+
+      @include adaptTo("tablet") {
+        max-width: 50vw;
+        align-items: center;
+        background-color: $white;
+        color: $primaryFont;
+        margin: 0 30px 0 50px;
+        gap: 20px;
+        line-height: 1.5;
+      }
+
+      @include adaptTo("desktop") {
+        max-width: 50vw;
+        align-items: center;
+        background-color: $white;
+        color: $primaryFont;
+        margin-left: 30px;
+        gap: 20px;
+        line-height: 1.5;
+      }
+
+      &--logo-blue {
+        width: 300px;
+        background-color: $bgPrimary;
+        margin: 0 0 50px 0;
+      }
+    }
+  }
+}
